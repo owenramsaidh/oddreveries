@@ -1,0 +1,64 @@
+/* Odd Reveries — near-black, full-bleed, the picture first. */
+:root{
+  --bg:#0b0b0b; --fg:#d9d6cf; --muted:#8f8a80; --faint:#5e5a53; --line:#232220; --accent:#a8987c;
+  --display:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --body:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: dark;
+}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--fg);text-decoration-color:var(--faint);text-underline-offset:3px}
+a:hover{text-decoration-color:var(--accent)}
+img{display:block;max-width:100%;height:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* header */
+.top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding:18px 16px;max-width:1400px;margin:0 auto}
+.mark{font-family:var(--display);font-size:22px;letter-spacing:.04em;text-decoration:none}
+.top nav{display:flex;gap:20px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.top nav a{text-decoration:none;color:var(--muted)}
+.top nav a:hover{color:var(--fg)}
+
+/* home */
+.hero{position:relative;min-height:70vh;display:flex;align-items:flex-end}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 70%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,11,11,.85),rgba(11,11,11,0) 55%)}
+.hero-text{position:relative;z-index:1;padding:32px 16px;max-width:1400px;width:100%;margin:0 auto;text-align:right}
+.hero h1{font-family:var(--display);font-weight:500;font-size:clamp(40px,8vw,84px);line-height:1;margin:0}
+.hero p{margin:8px 0 0;color:var(--muted);font-family:var(--display);font-style:italic;font-size:clamp(18px,2.4vw,24px)}
+.intro,.page{max-width:640px;margin:0 auto;padding:56px 16px}
+.intro p,.page p{font-size:18px}
+.sig{font-family:var(--display);font-style:italic;color:var(--muted);font-size:20px!important}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:4px;padding:0 0 64px}
+.card{position:relative;display:block;text-decoration:none;aspect-ratio:4/3;overflow:hidden;background:#151515}
+.card img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease,opacity .3s}
+.card:hover img{transform:scale(1.02);opacity:.85}
+.card span{position:absolute;left:16px;bottom:14px;font-family:var(--display);font-size:26px;text-shadow:0 1px 12px rgba(0,0,0,.8)}
+
+/* gallery */
+.entrance{max-width:640px;margin:0 auto;padding:64px 16px 72px}
+.entrance h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,56px);line-height:1.05;margin:0 0 28px}
+.entrance-text p{font-size:18px}
+.frames{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:clamp(48px,10vh,120px)}
+.frame img{width:100%;max-height:100vh;object-fit:contain;background:var(--bg)}
+.caption{max-width:1400px;margin:12px auto 0;padding:0 16px}
+.frame-title{margin:0;font-family:var(--display);font-size:20px}
+.frame-line{margin:2px 0 0;color:var(--muted);font-style:italic;font-family:var(--display);font-size:18px}
+.frame-actions:empty{display:none}
+.frame-actions{max-width:1400px;margin:8px auto 0;padding:0 16px}
+
+/* signup */
+.signup{max-width:640px;margin:120px auto 0;padding:32px 16px;border-top:1px solid var(--line);text-align:center}
+.signup p{color:var(--muted);margin:0 0 12px}
+.signup form{display:flex;gap:8px;justify-content:center;flex-wrap:wrap}
+.signup input{background:#151515;border:1px solid var(--line);color:var(--fg);padding:10px 12px;font:inherit;min-width:0;flex:1 1 220px;max-width:320px}
+.signup button{background:var(--fg);color:var(--bg);border:0;padding:10px 18px;font:inherit;cursor:pointer}
+.soon{font-size:14px}
+
+/* footer */
+.foot{max-width:1400px;margin:0 auto;padding:48px 16px;color:var(--faint);font-size:13px}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+.page h1{font-family:var(--display);font-weight:500;font-size:clamp(34px,6vw,56px);margin:0 0 24px}
+.page em{font-family:var(--display);color:var(--muted);font-size:20px}

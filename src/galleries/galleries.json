@@ -1,0 +1,4 @@
+{
+  "layout": "gallery.njk",
+  "permalink": "/{{ page.fileSlug }}/"
+}

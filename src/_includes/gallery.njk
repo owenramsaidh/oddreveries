@@ -1,0 +1,37 @@
+---
+layout: base.njk
+---
+<article class="gallery">
+  <header class="entrance">
+    <h1>{{ title }}</h1>
+    <div class="entrance-text">{{ content | safe }}</div>
+  </header>
+
+  <ol class="frames">
+    {% for img in images %}
+    <li class="frame" id="frame-{{ loop.index }}">
+      <img src="{{ img.file }}" alt="{{ img.alt }}" loading="{% if loop.index < 3 %}eager{% else %}lazy{% endif %}" decoding="async">
+      {% if img.title or img.caption %}
+      <div class="caption">
+        {% if img.title %}<p class="frame-title">{{ img.title }}</p>{% endif %}
+        {% if img.caption %}<p class="frame-line">{{ img.caption }}</p>{% endif %}
+      </div>
+      {% endif %}
+      <div class="frame-actions"></div>
+    </li>
+    {% endfor %}
+  </ol>
+
+  <section class="signup">
+    <p>{{ site.newsletter.line }}</p>
+    {% if site.newsletter.action %}
+    <form action="{{ site.newsletter.action }}" method="post" target="_blank">
+      <label class="sr" for="em">Email</label>
+      <input id="em" type="email" name="email" placeholder="Your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    {% else %}
+    <p class="soon">Signup opens soon. Meanwhile, <a href="mailto:{{ site.email }}">write</a>.</p>
+    {% endif %}
+  </section>
+</article>

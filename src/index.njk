@@ -1,0 +1,25 @@
+---
+layout: base.njk
+title: Odd Reveries
+---
+<section class="hero">
+  <img src="{{ home.heroImage }}" alt="{{ home.heroAlt }}" fetchpriority="high">
+  <div class="hero-text">
+    <h1>{{ site.name }}</h1>
+    <p>{{ site.tagline }}</p>
+  </div>
+</section>
+
+<section class="intro">
+  <p>{{ home.intro }}</p>
+  <p class="sig">Owen Ramsaidh</p>
+</section>
+
+<section class="cards" id="galleries">
+  {% for g in collections.galleries %}
+  <a class="card" href="{{ g.url }}">
+    <img src="{{ g.data.cover }}" alt="{{ g.data.coverAlt }}" loading="lazy">
+    <span>{{ g.data.title }}</span>
+  </a>
+  {% endfor %}
+</section>

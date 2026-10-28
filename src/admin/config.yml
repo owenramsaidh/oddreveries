@@ -1,0 +1,79 @@
+# The editor for Odd Reveries. Sign in with your GitHub account (owenramsaidh).
+backend:
+  name: github
+  repo: owenramsaidh/oddreveries
+  branch: main
+
+media_folder: src/images/uploads
+public_folder: /images/uploads
+
+site_url: https://oddreveries.pages.dev
+display_url: https://oddreveries.pages.dev
+
+collections:
+  - name: galleries
+    label: Galleries
+    label_singular: Gallery
+    folder: src/galleries
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    summary: "{{order}} · {{title}}"
+    fields:
+      - { name: layout, widget: hidden, default: gallery.njk }
+      - { name: title, label: Gallery title, widget: string }
+      - { name: order, label: Order on the home page, widget: number, value_type: int }
+      - { name: description, label: "Search description (one sentence)", widget: string }
+      - { name: cover, label: Cover image, widget: image }
+      - { name: coverAlt, label: Cover alt text, widget: string, required: false }
+      - name: images
+        label: Photographs, in order
+        label_singular: Photograph
+        widget: list
+        summary: "{{fields.title}}"
+        fields:
+          - { name: file, label: Photograph, widget: image }
+          - { name: title, label: Title, widget: string, required: false }
+          - { name: caption, label: "One line (often nothing)", widget: string, required: false }
+          - { name: alt, label: "Alt text (what's in the picture, plainly)", widget: string, required: false }
+      - { name: body, label: Entrance text, widget: markdown }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home
+        file: src/_data/home.json
+        format: json
+        fields:
+          - { name: heroImage, label: Hero image, widget: image }
+          - { name: heroAlt, label: Hero alt text, widget: string }
+          - { name: intro, label: Intro paragraph, widget: text }
+      - name: about
+        label: About
+        file: src/about.md
+        format: frontmatter
+        fields:
+          - { name: layout, widget: hidden, default: page.njk }
+          - { name: title, widget: hidden, default: About }
+          - { name: permalink, widget: hidden, default: /about/ }
+          - { name: description, label: Search description, widget: string }
+          - { name: body, label: About text, widget: markdown }
+      - name: site
+        label: Site settings
+        file: src/_data/site.json
+        format: json
+        fields:
+          - { name: name, label: Site name, widget: string }
+          - { name: tagline, label: Tagline, widget: string }
+          - { name: author, label: Byline, widget: string }
+          - { name: email, label: Contact email, widget: string }
+          - { name: description, label: Search description, widget: string }
+          - { name: url, label: Site address, widget: string }
+          - name: newsletter
+            label: Newsletter
+            widget: object
+            fields:
+              - { name: action, label: "Signup form address (from the newsletter service)", widget: string, required: false }
+              - { name: line, label: Signup line, widget: string }
