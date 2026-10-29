@@ -24,12 +24,8 @@ layout: base.njk
 
   <section class="signup">
     <p>{{ site.newsletter.line }}</p>
-    {% if site.newsletter.action %}
-    <form action="{{ site.newsletter.action }}" method="post" target="_blank">
-      <label class="sr" for="em">Email</label>
-      <input id="em" type="email" name="email" placeholder="Your email" required>
-      <button type="submit">Subscribe</button>
-    </form>
+    {% if site.newsletter.link %}
+    <p class="subscribe"><a href="{{ site.newsletter.link }}">Subscribe</a></p>
     {% else %}
     <p class="soon">Signup opens soon. Meanwhile, <a href="mailto:{{ site.email }}">write</a>.</p>
     {% endif %}

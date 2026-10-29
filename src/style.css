@@ -57,6 +57,8 @@ img{display:block;max-width:100%;height:auto}
 .signup input{background:#151515;border:1px solid var(--line);color:var(--fg);padding:10px 12px;font:inherit;min-width:0;flex:1 1 220px;max-width:320px}
 .signup button{background:var(--fg);color:var(--bg);border:0;padding:10px 18px;font:inherit;cursor:pointer}
 .soon{font-size:14px}
+.subscribe a{font-family:var(--display);font-size:22px;letter-spacing:.04em;text-decoration-color:var(--accent)}
+.subscribe a:hover{color:var(--accent)}
 
 /* footer */
 .foot{max-width:1400px;margin:0 auto;padding:48px 16px;color:var(--faint);font-size:13px}

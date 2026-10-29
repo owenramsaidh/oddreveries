@@ -75,5 +75,5 @@ collections:
             label: Newsletter
             widget: object
             fields:
-              - { name: action, label: "Signup form address (from the newsletter service)", widget: string, required: false }
+              - { name: link, label: "Subscribe link (the Substack signup page)", widget: string, required: false }
               - { name: line, label: Signup line, widget: string }
