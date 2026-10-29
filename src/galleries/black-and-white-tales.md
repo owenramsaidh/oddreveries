@@ -61,7 +61,7 @@ images:
   - file: /images/bw-tales/bw-tales-16.jpg
     title: A Flip of the Hourglass
     caption: ''
-    alt: ''
+    alt: A stone carving of Death, gaunt and nearly naked, holding up an hourglass, with crowns and a papal tiara at his feet.
   - file: /images/bw-tales/bw-tales-14.jpg
     title: View To a White Sky
     caption: ''
