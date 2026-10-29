@@ -16,5 +16,3 @@ To me, a photograph is the wardrobe you step through. The puzzle box you turn ov
 _Owen Ramsaidh_
 
 Questions about a print, a place, or a story you saw in one of these? I'd like to hear it: [owenramsaidh@gmail.com](mailto:owenramsaidh@gmail.com).
-
-Test line, please ignore
