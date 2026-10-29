@@ -58,6 +58,10 @@ images:
     title: The Midnight Train
     caption: ''
     alt: Two lights glowing through darkness and fog at night.
+  - file: /images/uploads/Time to Die....jpg
+    title: A Flip of the Hourglass
+    caption: ''
+    alt: ''
   - file: /images/bw-tales/bw-tales-14.jpg
     title: View To a White Sky
     caption: ''
@@ -66,10 +70,6 @@ images:
     title: Truly Forever Silent
     caption: ''
     alt: A carved stone memorial set in a crumbling wall niche.
-  - file: /images/uploads/Bilal.jpg
-    title: Resilience. Faith. Equality.
-    caption: ''
-    alt: ''
 ---
 
 I believe black and white photos can lead to more intimate imaginings.
