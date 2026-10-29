@@ -58,7 +58,7 @@ images:
     title: The Midnight Train
     caption: ''
     alt: Two lights glowing through darkness and fog at night.
-  - file: /images/uploads/Time to Die....jpg
+  - file: /images/bw-tales/bw-tales-16.jpg
     title: A Flip of the Hourglass
     caption: ''
     alt: ''
